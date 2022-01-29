@@ -113,7 +113,9 @@ do
                 cn_link="https://github.com.cnpmjs.org/"`echo $link|awk -F'com' '{print $2}'`
                 echo -e "   [$GREEN url($m) $COLOR_END]:$cn_link
                 "
-                git clone $cn_link "./$rootpath/${heading2[$i]}/$topic"
+                tool_name=`echo $link|awk -F'/' '{print $NF}'`
+                git clone $cn_link "./$rootpath/${heading2[$i]}/$topic/$tool_name"
+
 
             done
 

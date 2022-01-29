@@ -111,11 +111,12 @@ do
                 link=`echo $tool|grep -oh -E "https://[a-zA-Z0-9\.\/_&=@\$%?~#~]*"|sed -n 1p`
                 echo -e "   [$GREEN url($m) $COLOR_END]:$link
                 "
-                git clone $link "./$rootpath/${heading2[$i]}/$topic"
+                tool_name=`echo $link|awk -F'/' '{print $NF}'`
+                git clone $link "./$rootpath/${heading2[$i]}/$topic/$tool_name"
+
 
             done
         
         fi
-
     done
 done
