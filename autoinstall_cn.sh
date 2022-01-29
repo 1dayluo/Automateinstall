@@ -15,7 +15,7 @@ COLOR_END="\e[0m"
 : 'read md'
 processFile(){
 
-    mdpath='test/recon_tools.md' # for test
+    # mdpath='test/recon_tools.md' # for test
     # mdpath='test/test.md'
 
     if [  -r $mdpath ];then
@@ -87,7 +87,7 @@ echo "Load your .md file"
 read -p "Enter path:" mdpath
 processFile
 makeRootDir
-echo "${heading2[5]}"
+
 for i in "${!heading2[@]}";
 do
     echo -e "[$RED*$COLOR_END](H3)${heading2[$i]} will make dir...."

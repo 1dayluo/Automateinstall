@@ -87,7 +87,6 @@ echo "Load your .md file"
 read -p "Enter path:" mdpath
 processFile
 makeRootDir
-echo "${heading2[5]}"
 for i in "${!heading2[@]}";
 do
     echo -e "[$RED*$COLOR_END](H3)${heading2[$i]} will make dir...."
